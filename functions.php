@@ -22,3 +22,22 @@ add_action('after_setup_theme', 'tinsart_theme_setup');
 
 
 // Register footer
+
+// CSS and JavaScript
+
+function tinsart_enqueue_scripts() {
+    wp_enqueue_style(
+        'tinsart-style',
+        get_template_directory_uri() . '/css/styles.css',
+        array(),
+        filemtime(get_template_directory() . '/css/styles.css')
+    );
+    wp_enqueue_script(
+        'tinsart-script',
+        get_template_directory_uri() . '/js/script.js',
+        array(),
+        filemtime(get_template_directory() . '/js/script.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'tinsart_enqueue_scripts');
