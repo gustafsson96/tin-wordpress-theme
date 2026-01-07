@@ -252,7 +252,7 @@ nav ul li a:hover {
     transition: background 0.3s, transform 0.3s;
 }
 
-/* art-category.php */
+/* taxonomy-konstkategori.php */
 
 .gallery-section {
     display: grid;
@@ -299,6 +299,28 @@ nav ul li a:hover {
     font-size: 0.85rem;
     color: #666;
     text-align: center;
+}
+
+.back-to-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
+}
+
+.back-to-gallery a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: darkmagenta;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-gallery a:hover {
+    background-color: darkred;
 }
 
 /* about-page.php */

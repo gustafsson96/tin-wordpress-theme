@@ -64,7 +64,7 @@ function register_konstverk_post_type() {
         'has_archive'   => true,
         'menu_position' => 5,
         'menu_icon'     => 'dashicons-art',
-        'supports'      => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'supports'      => ['title', 'editor', 'thumbnail', 'custom-fields'],
     );
 
     register_post_type('konstverk', $args);
