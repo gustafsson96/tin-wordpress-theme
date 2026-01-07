@@ -204,6 +204,103 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* art-page.php */
+
+.gallery-overview-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3em;
+    padding: 1em;
+    margin: 0 5em;
+}
+
+.gallery-overview-card {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.gallery-overview-card:hover {
+    color: #333;
+    opacity: 80%;
+}
+
+.gallery-overview-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overview-card h2 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* art-category.php */
+
+.gallery-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    margin: 0 5em;
+}
+
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.gallery-card:hover {
+    color: #333;
+    opacity: 80%;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #000;
+    margin: 1em 0 0;
+}
+
+.gallery-card:hover h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.gallery-card .art-size {
+    padding: 0;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
 /* about-page.php */
 
 .about-content {
@@ -272,6 +369,14 @@ nav ul li a:hover {
 /* media query for screens smaller than 1000px */
 @media screen and (max-width: 1000px) {
 
+    /* art-category.php */
+
+    .gallery-section {
+        gap: 1;
+        padding: 1em;
+        margin: 0;
+    }
+
     /* about-page.php */
 
     .about-content {
@@ -333,6 +438,13 @@ nav ul li a:hover {
         display: flex;
     }
 
+    /* art-page.php */
+
+    .gallery-overview-section {
+        gap: 2em;
+        margin: 0 2em;
+    }
+
     /* about.php */
 
     .about-content {
@@ -362,7 +474,7 @@ nav ul li a:hover {
     }
 
     /* about-page.php */
-    
+
     .about-image img {
         width: 250px;
         height: 250px;
