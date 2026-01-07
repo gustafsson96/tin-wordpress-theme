@@ -37,3 +37,5 @@
             <div></div>
         </div>
     </header>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
