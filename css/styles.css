@@ -143,6 +143,49 @@ nav ul li a:hover {
     background-color: darkred;
 }
 
+/* single.php (for 'nyheter') */
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.article-container img {
+    max-width: 55%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.article-date {
+    font-size: 1em;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+.article-text {
+    max-width: 55%;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.back-to-start a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: darkmagenta;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-start a:hover {
+    background-color: darkred;
+}
+
 /* sidebar.php */
 
 .sidebar {
@@ -459,6 +502,16 @@ nav ul li a:hover {
 /* media query for screens smaller than 1000px */
 @media screen and (max-width: 1000px) {
 
+    /* single.php (for 'nyheter') */
+
+    .article-container img {
+        max-width: 65%;
+    }
+
+    .article-text {
+        max-width: 65%;
+    }
+
     /* art-category.php */
 
     .gallery-section {
@@ -554,6 +607,22 @@ nav ul li a:hover {
         display: flex;
     }
 
+    /* single.php (for 'nyheter') */
+
+    .article-container h1 {
+        font-size: 2em;
+        margin: 1em 0.2em 0.5em;
+    }
+
+    .article-container img {
+        max-width: 80%;
+    }
+
+    .article-text {
+        max-width: 80%;
+    }
+
+
     /* art-page.php */
 
     .gallery-overview-section {
@@ -598,6 +667,15 @@ nav ul li a:hover {
 
 /* media query for screens smaller than 500px */
 @media screen and (max-width: 500px) {
+
+    /* single.php (for 'nyheter') */
+    .article-container img {
+        max-width: 90%;
+    }
+
+    .article-text {
+        max-width: 90%;
+    }
 
     /* sidebar.php */
 

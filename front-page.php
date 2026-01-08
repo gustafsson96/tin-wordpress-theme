@@ -3,7 +3,7 @@
 <main>
     <h1>Hem</h1>
     <div class="sp-main">
-        <!-- News articles / Latest posts -->
+        <!-- Latest news -->
         <section class="news-container">
             <h2>Senaste nytt</h2>
 
@@ -11,7 +11,8 @@
             // Query latest 3 posts
             $news_query = new WP_Query(array(
                 'posts_per_page' => 3,
-                'post_status'    => 'publish'
+                'post_status'    => 'publish',
+                'category_name' => 'nyheter',
             ));
 
             if ($news_query->have_posts()) :
@@ -20,10 +21,7 @@
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                         <?php endif; ?>
-
-                        <!-- Just the title, no link -->
                         <h3><?php the_title(); ?></h3>
-
                         <p>
                             <?php echo wp_trim_words(get_the_content(), 30, ' [...]'); ?>
                         </p>
