@@ -27,7 +27,7 @@
             </a>
         </div>
         <!-- The main menu -->
-        <nav class="main-menu" id="main-menu">
+        <nav id="main-menu">
             <?php wp_nav_menu(array('theme_location' => 'main-nav')); ?>
         </nav>
         <!-- Hamburger icon -->
