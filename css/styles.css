@@ -460,6 +460,10 @@ nav ul li a:hover {
 
 /* about-page.php */
 
+.about-article h1 {
+    margin-bottom: 1em;
+}
+
 .about-content {
     display: flex;
     flex-direction: row;

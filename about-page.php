@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <main>
-    <article>
+    <article class="about-article">
         <h1><?php the_title(); ?></h1>
         <div class="about-content">
 
