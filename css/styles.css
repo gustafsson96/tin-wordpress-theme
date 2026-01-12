@@ -1,9 +1,19 @@
+/* root variables for color scheme and google fonts */
+:root {
+    --color-bg: #FFC1D9;
+    --color-primary: #29472D;
+    --color-accent-orange: #FF8921;
+    --color-accent-blue: #003D9A;
+    --font-main: 'Poppins', Arial, sans-serif;
+    --font-menu-items: 'Archivo Black', sans-serif, Helvetica;
+}
+
 /* general styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--color-bg);
+    color: #000;
 }
 
 main {
@@ -16,6 +26,16 @@ main p {
 
 h1 {
     text-align: center;
+    margin: 0.7em;
+    font-family: var(--font-menu-items);
+    font-weight: 600;
+    font-size: 2.3em;
+}
+
+h2 {
+    font-family: var(--font-main);
+    font-weight: 600;
+    margin-top: 0;
 }
 
 /* header styling */
@@ -23,9 +43,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    padding-right: 1em;
+    background-color: var(--color-accent-orange);
 }
 
 /* logotype */
@@ -36,10 +55,12 @@ header {
 
 .logotype a {
     text-decoration: none;
+    color: #000;
+    margin: 0;
 }
 
 .logotype img {
-    width: 60px;
+    width: 140px;
     height: auto;
     margin: 0;
     padding: 0;
@@ -56,20 +77,22 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 1.2em;
 }
 
 nav ul li a {
+    font-family: var(--font-menu-items);
+    font-size: 1.1em;
     text-decoration: none;
     font-weight: bold;
     display: block;
     padding: 10px 0;
-    color: #333;
+    color: #000;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #0077cc;
+    color: #B03060;
 }
 
 /* hamburger icon */
@@ -85,7 +108,7 @@ nav ul li a:hover {
     width: 25px;
     height: 3px;
     transition: all 0.3s;
-    background-color: #333;
+    background-color: #000;
 }
 
 /* overlay */
@@ -114,7 +137,7 @@ nav ul li a:hover {
 .news-container article {
     margin-bottom: 4em;
     padding-bottom: 1em;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #FF8BB5;;
 }
 
 .news-container img {
@@ -129,7 +152,7 @@ nav ul li a:hover {
 .read-more a {
     display: inline-block;
     padding: 0.5em;
-    background-color: darkmagenta;
+    background-color: var(--color-primary);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -140,7 +163,7 @@ nav ul li a:hover {
 }
 
 .read-more a:hover {
-    background-color: darkred;
+    background-color: var(--color-accent-orange);
 }
 
 /* single.php (for 'nyheter') */
@@ -161,7 +184,7 @@ nav ul li a:hover {
 .article-date {
     font-size: 1em;
     font-style: italic;
-    color: #666;
+    color: var(--color-primary);
     text-align: center;
 }
 
@@ -174,7 +197,7 @@ nav ul li a:hover {
 .back-to-start a {
     display: inline-block;
     padding: 0.5em 1em;
-    background-color: darkmagenta;
+    background-color: var(--color-primary);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -183,7 +206,7 @@ nav ul li a:hover {
 }
 
 .back-to-start a:hover {
-    background-color: darkred;
+    background-color: var(--color-accent-orange);
 }
 
 /* sidebar.php */
@@ -192,7 +215,7 @@ nav ul li a:hover {
     width: 300px;
     margin-left: 2em;
     flex-shrink: 0;
-    border-left: 1px solid lightgrey;
+    border-left: 1px solid #FF8BB5;
     padding: 1em 3em;
 }
 
@@ -354,7 +377,7 @@ nav ul li a:hover {
 .back-to-gallery a {
     display: inline-block;
     padding: 0.5em 1em;
-    background-color: darkmagenta;
+    background-color: var(--color-primary);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -363,7 +386,7 @@ nav ul li a:hover {
 }
 
 .back-to-gallery a:hover {
-    background-color: darkred;
+    background-color: var(--color-accent-orange);
 }
 
 /* single-konstverk.php */
@@ -472,7 +495,7 @@ nav ul li a:hover {
 /* media query for screens smaller than 1100px */
 @media screen and (max-width: 1100px) {
     h1 {
-        margin-bottom: 0.3em;
+        margin: 0.7em;
     }
 
     /* front-page.php */
@@ -501,7 +524,6 @@ nav ul li a:hover {
 
 /* media query for screens smaller than 1000px */
 @media screen and (max-width: 1000px) {
-
     /* single.php (for 'nyheter') */
 
     .article-container img {
@@ -595,11 +617,11 @@ nav ul li a:hover {
     }
 
     nav.active ul li a {
-        color: #333;
+        color: #000;
     }
 
     nav.active ul li a:hover {
-        color: #0077cc;
+        color: #B03060;
     }
 
     /* hamburger icon */
@@ -621,7 +643,6 @@ nav ul li a:hover {
     .article-text {
         max-width: 80%;
     }
-
 
     /* art-page.php */
 
