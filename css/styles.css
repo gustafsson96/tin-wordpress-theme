@@ -612,13 +612,13 @@ nav ul li a:hover {
         right: 0;
         height: 100%;
         width: 250px;
-        padding-top: 60px;
+        padding-top: 9em;
         z-index: 1000;
+        background-color: var(--color-accent-orange);
     }
 
     nav.active ul li {
-        margin: 20px 0;
-        text-align: center;
+        margin: 1em 2em;
     }
 
     nav.active ul li a {
