@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<?php
+echo do_shortcode('[smartslider3 slider="3"]');
+?>
 <main>
     <h1>Hem</h1>
     <div class="sp-main">
