@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <!-- Slideshow -->
 <?php
-echo do_shortcode('[smartslider3 slider="3"]');
+if (function_exists('smartslider3')) {
+    echo do_shortcode('[smartslider3 slider="3"]');
+}
 ?>
 <!-- Puff -->
 <?php $puff_text = get_theme_mod('puff_text'); ?>
