@@ -1,6 +1,6 @@
 <?php
 /* Template Name: About Page */
-get_header(); 
+get_header();
 ?>
 
 <main>
@@ -26,7 +26,11 @@ get_header();
         <!-- Contact forms and social media links -->
         <div class="contact-section">
             <h2>Kontakta mig</h2>
-            <?php echo do_shortcode('[contact-form-7 id="228ab2a" title="Contact Form"]'); ?>
+            <?php
+            if (shortcode_exists('contact-form-7')) {
+                echo do_shortcode('[contact-form-7 id="228ab2a" title="Contact Form"]');
+            }
+            ?>
         </div>
 
     </article>
