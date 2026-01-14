@@ -17,6 +17,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    font-family: var(--font-main);
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -44,14 +45,14 @@ h1 {
 h2 {
     font-family: var(--font-main);
     font-weight: 600;
-    font-size: 1.8em;
+    font-size: 1.9em;
     margin-top: 0;
 }
 
 h3 {
     font-family: var(--font-main);
     font-weight: 600;
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin: 0.5em 0 0;
 }
 
