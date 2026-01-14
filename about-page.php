@@ -22,6 +22,13 @@ get_header();
                 ?>
             </div>
         </div>
+
+        <!-- Contact forms and social media links -->
+        <div class="contact-section">
+            <h2>Kontakta mig</h2>
+            <?php echo do_shortcode('[contact-form-7 id="228ab2a" title="Contact Form"]'); ?>
+        </div>
+
     </article>
 </main>
 

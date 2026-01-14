@@ -3,7 +3,6 @@
     --color-bg: #FFC1D9;
     --color-primary: #29472D;
     --color-accent-orange: #FF8921;
-    --color-accent-blue: #003D9A;
     --font-main: 'Poppins', Arial, sans-serif;
     --font-menu-items: 'Archivo Black', sans-serif, Helvetica;
 }
@@ -525,6 +524,54 @@ nav ul li a:hover {
 .about-text {
     width: 50%;
     line-height: 1.4;
+}
+
+.contact-section {
+    margin-top: 3em;
+    padding: 2em;
+    background-color: #FFE6F0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.8rem;
+}
+
+/* contact form */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.6em;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-section input[type="submit"],
+.contact-section button {
+    padding: 0.8em 1.2em;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section input[type="submit"]:hover,
+.contact-section button:hover {
+    background-color: var(--color-accent-orange);
 }
 
 /* footer styling */
