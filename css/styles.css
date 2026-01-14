@@ -10,7 +10,8 @@
 
 /* general styling */
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -141,6 +142,17 @@ nav ul li a:hover {
 
 /* front-page.php */
 
+/* puff */
+.puff-banner {
+    width: 100%;
+    background-color: var(--color-accent-orange);
+    color: #000;
+    text-align: center;
+    padding: 0.8em 1em;
+    font-weight: bold;
+    font-size: 1em;
+}
+
 .sp-main {
     display: flex;
     flex-direction: row;
@@ -155,7 +167,8 @@ nav ul li a:hover {
 .news-container article {
     margin-bottom: 4em;
     padding-bottom: 1em;
-    border-bottom: 1px solid #FF8BB5;;
+    border-bottom: 1px solid #FF8BB5;
+    ;
 }
 
 .news-container img {
@@ -632,6 +645,22 @@ footer p {
 /* media query for screens smaller than 768px */
 @media screen and (max-width: 768px) {
 
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
     /* header styling */
     nav ul {
         display: none;
@@ -667,6 +696,15 @@ footer p {
     /* hamburger icon */
     .hamburger-icon {
         display: flex;
+    }
+
+    /* front-page.php */
+
+    /* puff */
+    .puff-banner {
+        padding: 0.6em;
+        font-weight: bold;
+        font-size: 0.6em;
     }
 
     /* single.php (for 'nyheter') */

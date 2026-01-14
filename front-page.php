@@ -1,7 +1,16 @@
 <?php get_header(); ?>
+<!-- Slideshow -->
 <?php
 echo do_shortcode('[smartslider3 slider="3"]');
 ?>
+<!-- Puff -->
+<?php $puff_text = get_theme_mod('puff_text'); ?>
+
+<?php if (!empty($puff_text)) : ?>
+    <div class="puff-banner">
+        <?php echo esc_html($puff_text); ?>
+    </div>
+<?php endif; ?>
 <main>
     <h1>Hem</h1>
     <div class="sp-main">

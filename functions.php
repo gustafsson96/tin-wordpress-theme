@@ -98,3 +98,24 @@ function register_konstkategorier_taxonomy() {
     register_taxonomy('konstkategorier', array('konstverk'), $args);
 }
 add_action('init', 'register_konstkategorier_taxonomy');
+
+// Puff for home page
+function puff_customizer_settings($wp_customize) {
+    $wp_customize->add_section('puff_section', array(
+        'title'    => __('Puff Hem', 'tinsart'),
+        'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('puff_text', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('puff_text_control', array(
+        'label'    => __('Text för puff', 'tinsart'),
+        'section'  => 'puff_section',
+        'settings' => 'puff_text',
+        'type'     => 'text',
+    ));
+}
+add_action('customize_register', 'puff_customizer_settings');
