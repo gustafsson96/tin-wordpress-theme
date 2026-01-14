@@ -28,7 +28,7 @@ get_header();
             <h2>Kontakta mig</h2>
             <?php
             if (shortcode_exists('contact-form-7')) {
-                echo do_shortcode('[contact-form-7 id="228ab2a" title="Contact Form"]');
+                echo do_shortcode('[contact-form-7 id="1f8e0db" title="Contact Form"]');
             }
             ?>
         </div>
