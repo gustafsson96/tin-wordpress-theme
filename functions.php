@@ -48,12 +48,8 @@ function register_konstverk_post_type() {
     $labels = array(
         'name'          => 'Konstverk',
         'singular_name' => 'Konstverk',
-        'add_new'       => 'Lägg till nytt',
         'add_new_item'  => 'Lägg till nytt konstverk',
         'edit_item'     => 'Redigera konstverk',
-        'new_item'      => 'Nytt konstverk',
-        'view_item'     => 'Visa konstverk',
-        'search_items'  => 'Sök konstverk',
         'not_found'     => 'Inga konstverk hittades',
         'menu_name'     => 'Konstverk',
     );
