@@ -534,15 +534,14 @@ nav ul li a:hover {
 
 .contact-section h2 {
     text-align: center;
-    margin-bottom: 1.5em;
-    font-size: 1.8rem;
+    font-size: 1.8em;
 }
 
 /* contact form */
 .contact-section form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     font-family: var(--font-main);
 }
@@ -550,9 +549,9 @@ nav ul li a:hover {
 .contact-section input,
 .contact-section textarea {
     padding: 0.6em;
-    font-size: 1rem;
+    font-size: 1em;
     border: 1px solid #cccccc;
-    border-radius: 4px;
+    border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
 }
