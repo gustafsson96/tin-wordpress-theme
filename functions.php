@@ -82,6 +82,7 @@ add_action('add_meta_boxes', function () {
                 placeholder="t.ex. 60 × 80 cm"
                 style="width:100%;"
             />
+            <?php wp_nonce_field('save_art_size', 'art_size_nonce'); ?>
             <?php
         },
         'konstverk',
