@@ -20,7 +20,6 @@ body {
     font-family: var(--font-main);
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: var(--color-bg);
     color: #000;
 }
@@ -519,7 +518,7 @@ nav ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    margin-top: 1em;
+    margin-top: 2.5em;
 }
 
 .about-text {
