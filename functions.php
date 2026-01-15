@@ -67,7 +67,39 @@ function register_konstverk_post_type() {
 }
 add_action('init', 'register_konstverk_post_type');
 
+// Art size for CPT artword
+add_action('add_meta_boxes', function () {
+    add_meta_box(
+        'art_size',
+        'Storlek',
+        function ($post) {
+            $value = get_post_meta($post->ID, 'art_size', true);
+            ?>
+            <input
+                type="text"
+                name="art_size"
+                value="<?php echo esc_attr($value); ?>"
+                placeholder="t.ex. 60 × 80 cm"
+                style="width:100%;"
+            />
+            <?php
+        },
+        'konstverk',
+        'side'
+    );
+});
 
+add_action('save_post', function ($post_id) {
+    if (get_post_type($post_id) !== 'konstverk') return;
+
+    if (isset($_POST['art_size'])) {
+        update_post_meta(
+            $post_id,
+            'art_size',
+            sanitize_text_field($_POST['art_size'])
+        );
+    }
+});
 
 // Register Taxonomy: Konstkategorier (created using Custom Post Type UI + ACF field for image)
 function register_konstkategorier_taxonomy() {
