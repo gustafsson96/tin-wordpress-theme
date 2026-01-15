@@ -21,7 +21,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Contact forms and social media links -->
+        <!-- Contact form -->
         <div class="contact-section">
             <h2>Kontakta Tin</h2>
             <?php
