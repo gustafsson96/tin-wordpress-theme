@@ -23,7 +23,7 @@ get_header();
 
         <!-- Contact forms and social media links -->
         <div class="contact-section">
-            <h2>Kontakta mig</h2>
+            <h2>Kontakta Tin</h2>
             <?php
             if (shortcode_exists('contact-form-7')) {
                 echo do_shortcode('[contact-form-7 id="1f8e0db" title="Contact Form"]');
