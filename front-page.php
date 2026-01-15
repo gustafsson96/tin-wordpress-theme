@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: Start Page */
+get_header();
+?>
+
 <!-- Slideshow -->
 <?php
 echo do_shortcode('[smartslider3 slider="3"]');
