@@ -67,7 +67,7 @@ function register_konstverk_post_type() {
 }
 add_action('init', 'register_konstverk_post_type');
 
-// Art size for CPT artword
+// Art size for CPT artwork
 add_action('add_meta_boxes', function () {
     add_meta_box(
         'art_size',
@@ -90,8 +90,12 @@ add_action('add_meta_boxes', function () {
 });
 
 add_action('save_post', function ($post_id) {
+    if (!isset($_POST['art_size_nonce']) || !wp_verify_nonce($_POST['art_size_nonce'], 'save_art_size')) {
+        return;
+    }
     if (get_post_type($post_id) !== 'konstverk') return;
-
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (wp_is_post_revision($post_id)) return;
     if (isset($_POST['art_size'])) {
         update_post_meta(
             $post_id,

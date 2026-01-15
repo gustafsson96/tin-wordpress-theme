@@ -17,9 +17,11 @@
                 <?php endif; ?>
             </div>
         </div>
-
         <div class="art-second-row">
-            <?php the_content(); ?>
+            <div class="second-row-text">
+                <h2>Beskrivning</h2>
+                <?php the_content(); ?>
+            </div>
         </div>
     </article>
 

@@ -423,10 +423,11 @@ nav ul li a:hover {
 .single-art-page {
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    padding: 3em;
     flex-wrap: wrap;
     margin: 0 auto;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
 }
 
 .art-first-row {
@@ -436,6 +437,8 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 1em;
+    margin: 2em 0 0;
 }
 
 .single-art-page img {
@@ -466,19 +469,22 @@ nav ul li a:hover {
 }
 
 .art-second-row {
-    text-align: left;
-    margin-left: 6em;
+    max-width: 650px;
+    background-color: #FFE6F0;
+    padding: 2em;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 0 2em;
 }
 
-.single-art-description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    margin: 0.5em 0 0;
+.art-second-row h2 {
+    font-family: var(--font-menu-items);
+    font-size: 1.5em;
+    margin-bottom: 0;
 }
 
 .back-to-gallery {
-    margin: 2em auto;
+    margin: 0 auto 3em;
     text-align: center;
 }
 
@@ -645,26 +651,29 @@ footer p {
 
     .single-art-page {
         gap: 0;
-        padding: 1em;
     }
 
     .single-art-page h1 {
-        margin: 0.5em 0;
-        font-size: 1.3rem;
+        margin: 0 0 0.5em;
+        font-size: 1.4rem;
     }
 
     .single-art-page img {
-        margin-top: 0;
-        max-width: 50%;
+        margin: 0;
+        max-width: 55%;
     }
 
     .art-first-row {
-        gap: 0;
-        margin-bottom: 0;
+        gap: 1em;
+    }
+
+    .art-second-row h2 {
+        font-size: 1.3em;
     }
 
     .art-overview {
         max-width: 70%;
+        margin: 0 auto;
     }
 
     /* about-page.php */
@@ -784,18 +793,39 @@ footer p {
 
     /* single-konstverk.php */
 
-    .single-art-page img {
-        margin-top: 0;
-        max-width: 75%;
-    }
-
-    .art-overview {
-        max-width: 90%;
+    .single-art-page {
+        margin: 0;
         padding: 0;
     }
 
+    .single-art-page img {
+        margin: 1em 0 0 0;
+        width: 75%;
+    }
+
+    .art-first-row {
+        margin: 0;
+    }
+
+    .art-overview {
+        padding: 0;
+        margin-bottom: 1.5em;
+    }
+
     .art-second-row {
-        margin-left: 2em;
+        margin: 0 0 2em 0;
+        padding: 0;
+        width: 95%;
+    }
+
+    .art-second-row h2 {
+        font-size: 1.3em;
+    }
+
+    .second-row-text {
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 1em 0;
     }
 
     /* about.php */
@@ -814,6 +844,15 @@ footer p {
     .about-text {
         width: 90%;
         margin: 0 auto;
+    }
+}
+
+/* mediq query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+
+    .art-second-row {
+        border-radius: 0;
+        width: 100%;
     }
 }
 
