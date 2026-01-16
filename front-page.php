@@ -41,10 +41,10 @@ echo do_shortcode('[smartslider3 slider="3"]');
                             <?php echo wp_trim_words(get_the_content(), 30, ' [...]'); ?>
                         </p>
                         <div class="read-more">
-                            <a href="<?php the_permalink(); ?>">Läs mer</a>
+                            <a href="<?php the_permalink(); ?>" aria-label="Läs mer om <?php the_title(); ?>">Läs mer</a>
                         </div>
                     </article>
-                <?php
+            <?php
                 endwhile;
                 wp_reset_postdata();
             else :

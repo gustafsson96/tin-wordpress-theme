@@ -15,16 +15,13 @@
     <!-- Header with main menu -->
     <header>
         <div class="logotype">
-            <a href="<?= get_home_url(); ?>">
-                <!-- Display custom logo with page title as fallback -->
-                <?php
-                if (function_exists('the_custom_logo') && has_custom_logo()) {
-                    the_custom_logo();
-                } else {
-                    echo '<h1>' . get_bloginfo('name') . '</h1>';
-                }
-                ?>
-            </a>
+            <?php
+            if (function_exists('the_custom_logo') && has_custom_logo()) {
+                the_custom_logo();
+            } else {
+                echo '<a href="' . get_home_url() . '"><h1>' . get_bloginfo('name') . '</h1></a>';
+            }
+            ?>
         </div>
         <!-- The main menu -->
         <nav id="main-menu">
