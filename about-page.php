@@ -8,10 +8,12 @@ get_header();
         <div class="about-content">
             <?php if (has_post_thumbnail()) : ?>
                 <div class="about-image">
+                    <!-- Show featured image -->
                     <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                 </div>
             <?php endif; ?>
             <div class="about-text">
+                <!-- Show title and text content -->
             <h1><?php the_title(); ?></h1>
                 <?php
                 while (have_posts()) : the_post();
@@ -21,7 +23,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Contact form -->
+        <!-- Contact form (from plugin Contact Form 7) -->
         <div class="contact-section">
             <h2>Kontakta Tin</h2>
             <?php

@@ -1,6 +1,6 @@
 <?php
 
-// Register menu + logotype
+// Register menu
 add_action('init', 'register_my_menus');
 function register_my_menus() {
     register_nav_menus(array(
@@ -10,6 +10,7 @@ function register_my_menus() {
 
 // Theme setup
 function tinsart_theme_setup() {
+    // Enable support for custom logotype 
     add_theme_support('custom-logo', array(
         'height'      => 60,
         'width'       => 60,
@@ -42,7 +43,6 @@ function tinsart_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'tinsart_enqueue_scripts');
 
 
-
 // Register Custom Post Type: Konstverk (created using Custom Post Type UI)
 function register_konstverk_post_type() {
     $labels = array(
@@ -67,12 +67,13 @@ function register_konstverk_post_type() {
 }
 add_action('init', 'register_konstverk_post_type');
 
-// Art size for CPT artwork
+// Meta-box to include size for artworks
 add_action('add_meta_boxes', function () {
     add_meta_box(
         'art_size',
         'Storlek',
         function ($post) {
+            // Saved value
             $value = get_post_meta($post->ID, 'art_size', true);
             ?>
             <input
@@ -90,6 +91,7 @@ add_action('add_meta_boxes', function () {
     );
 });
 
+// Save artwork size meta field for artwork post type
 add_action('save_post', function ($post_id) {
     if (!isset($_POST['art_size_nonce']) || !wp_verify_nonce($_POST['art_size_nonce'], 'save_art_size')) {
         return;
@@ -106,7 +108,7 @@ add_action('save_post', function ($post_id) {
     }
 });
 
-// Register Taxonomy: Konstkategorier (created using Custom Post Type UI + ACF field for image)
+// Register Custom taxonomy: Konstkategorier (created using Custom Post Type UI and extended with ACF image field)
 function register_konstkategorier_taxonomy() {
     $labels = array(
         'name'          => 'Konstkategorier',

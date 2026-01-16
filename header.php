@@ -15,6 +15,7 @@
     <!-- Header with main menu -->
     <header>
         <div class="logotype">
+            <!-- Logotype rendered dynamically with title as fallback -->
             <?php
             if (function_exists('the_custom_logo') && has_custom_logo()) {
                 the_custom_logo();

@@ -7,7 +7,7 @@ get_header();
     <h1>Galleri</h1>
     <section class="gallery-overview-section">
         <?php
-        // Get all terms for custom artwork taxonomy
+        // Get all terms from custom "konstkategorier" taxonomy
         $terms = get_terms([
             'taxonomy'   => 'konstkategorier',
             'hide_empty' => false,
@@ -17,9 +17,10 @@ get_header();
 
         if (! empty($terms) && ! is_wp_error($terms)) :
 
+            // Loop through each category
             foreach ($terms as $term) :
 
-                // Check if ACF function exists
+                // Check if Advanced Custom Fields (ACF) function exists
                 if (function_exists('get_field')) {
                     $image_url = get_field('konst_bild', $term);
                 } else {
@@ -31,6 +32,7 @@ get_header();
                     $image_url = get_template_directory_uri() . '/images/fallback.jpg';
                 }
         ?>
+                <!-- Clickable category image and title -->
                 <a class="gallery-overview-card" href="<?php echo esc_url(get_term_link($term)); ?>">
                     <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($term->name); ?>">
                     <h2><?php echo esc_html($term->name); ?></h2>
@@ -39,6 +41,7 @@ get_header();
             endforeach;
 
         else :
+            // Message if no categories are found
             echo '<p>Inga kategorier hittades.</p>';
         endif;
         ?>
