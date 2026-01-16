@@ -112,6 +112,11 @@ nav ul li a:hover {
     color: #B03060;
 }
 
+/* styling for active menu item */
+#main-menu .current-menu-item > a {
+    text-decoration: underline;
+}
+
 /* hamburger icon */
 .hamburger-icon {
     display: none;
