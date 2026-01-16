@@ -30,4 +30,4 @@ Följande filer har skapats:
 * **Smart Slide 3** - För att skapa en slideshow på startsidan. 
 
 ## Publicering
-Webbplatsen har publicerats till https://studenter.miun.se/~jugu2402/ med hjälp av FileZilla. 
+Webbplatsen har publicerats till Mittuniversitetets student-server (https://studenter.miun.se/) med hjälp av FileZilla. 
