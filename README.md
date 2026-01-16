@@ -5,7 +5,7 @@ En webbplats har skapats med ett nytt WordPress-tema för konstnären **Tin Åli
 Webbplatsen kan ses här: [Tin Åling – Konst](https://studenter.miun.se/~jugu2402/writeable/wordpress/)
 
 ## Teknologier
-* HtML, CSS och JavaScript
+* HTML, CSS och JavaScript
 * PHP
 * WordPress CMS
 
