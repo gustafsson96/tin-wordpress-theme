@@ -1,6 +1,6 @@
 # Projekt - WordPress-tema för Tin Åling (Skapat av Julia Gustafsson)
 
-En webbplats har skapats med ett nytt WordPress-tema för konstnären **Tin Åling**. Utvecklingsarbetet har utgått från designskisser som tagits fram tillsammans med konstnären som därefter implementerats i en statisk webbplats. Den statiska webbplatsen har sedan omvandlats till detta WordPress-tema, där majoriteten av allt innehåll renderas dynamiskt från wp-admin. 
+En webbplats har skapats med ett nytt WordPress-tema för konstnären **Tin Åling**. Utvecklingsarbetet har utgått från designskisser som tagits fram tillsammans med konstnären som därefter implementerats i en statisk webbplats. Den statiska webbplatsen har sedan omvandlats till detta WordPress-tema (i en separat projektmapp), där majoriteten av allt innehåll renderas dynamiskt från wp-admin. 
 
 Webbplatsen kan ses här: [Tin Åling – Konst](https://studenter.miun.se/~jugu2402/writeable/wordpress/)
 
